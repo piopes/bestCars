@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="bestCars:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>bestCars</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="bestCars-0.0.1-SNAPSHOT.war">
+      <element id="artifact" artifact-name="bestCars:war exploded" />
+    </root>
+  </artifact>
+</component>
