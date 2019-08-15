@@ -4,7 +4,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
+
 
 @Entity
 public class Reservation {
@@ -14,12 +15,12 @@ public class Reservation {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private LocalDateTime dateFrom;
-    private LocalDateTime dateTo;
+    private LocalDate dateFrom;
+    private LocalDate dateTo;
     private Long userId;
     private Long carId;
 
-    public Reservation(LocalDateTime dateFrom, LocalDateTime dateTo, Long userId, Long carId) {
+    public Reservation(LocalDate dateFrom, LocalDate dateTo, Long userId, Long carId) {
         this.dateFrom = dateFrom;
         this.dateTo = dateTo;
         this.userId = userId;
@@ -29,19 +30,19 @@ public class Reservation {
     public Reservation() {
     }
 
-    public LocalDateTime getDateFrom() {
+    public LocalDate getDateFrom() {
         return dateFrom;
     }
 
-    public void setDateFrom(LocalDateTime dateFrom) {
+    public void setDateFrom(LocalDate dateFrom) {
         this.dateFrom = dateFrom;
     }
 
-    public LocalDateTime getDateTo() {
+    public LocalDate getDateTo() {
         return dateTo;
     }
 
-    public void setDateTo(LocalDateTime dateTo) {
+    public void setDateTo(LocalDate dateTo) {
         this.dateTo = dateTo;
     }
 

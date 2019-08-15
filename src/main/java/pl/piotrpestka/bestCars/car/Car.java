@@ -1,6 +1,10 @@
 package pl.piotrpestka.bestCars.car;
 
+import pl.piotrpestka.bestCars.reservation.Reservation;
+
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Car {
@@ -17,6 +21,8 @@ public class Car {
     private String vinNumber;
     private int price;
     private CarStatus carStatus;
+    @OneToMany(mappedBy = "carId")
+    List<Reservation> ReservationList;
 
 
     public Car(String brand, String model, int year, String color, int mileage, String vinNumber, int price) {
@@ -28,6 +34,7 @@ public class Car {
         this.vinNumber = vinNumber;
         this.price = price;
         this.carStatus = CarStatus.AVAILABLE;
+        this.ReservationList = new ArrayList<>();
 
 
     }

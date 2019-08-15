@@ -30,14 +30,12 @@ public class UserController {
 
             boolean result = userService.addNewUser(name, lastName, email,password , city, street, number);
             model.addAttribute("addedUser", result);
-            // mod.addAttribute("allMyCars",listOfCars);
             return "user/userInfo";
 
         } catch (Exception e) {
             model.addAttribute("errorMessage", e.getLocalizedMessage());
             return "user/newUserForm";
         }
-
 
 
     }

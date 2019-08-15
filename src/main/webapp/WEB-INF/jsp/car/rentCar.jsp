@@ -71,7 +71,7 @@
                         <td> ${car.mileage} km</td>
                         <td> ${car.carStatus}</td>
                         <td>${car.price} $</td>
-                        <td><a href="/cars/buy?carId=${car.id}"><button class="button">rent this car</button></a></td>
+                        <td><a href="/reservation?carId=${car.id}"><button class="button">rent this car</button></a></td>
                     </tr>
 
                 </c:forEach>

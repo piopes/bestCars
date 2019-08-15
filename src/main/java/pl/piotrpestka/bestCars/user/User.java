@@ -89,4 +89,8 @@ public class User {
     public void setNumber(int number) {
         this.number = number;
     }
+
+    public Long getId() {
+        return id;
+    }
 }
