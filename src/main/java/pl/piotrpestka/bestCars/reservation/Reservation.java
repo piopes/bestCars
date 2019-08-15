@@ -1,5 +1,7 @@
 package pl.piotrpestka.bestCars.reservation;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -15,7 +17,9 @@ public class Reservation {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    @DateTimeFormat(pattern = "dd.MM.yyyy")
     private LocalDate dateFrom;
+    @DateTimeFormat(pattern = "dd.MM.yyyy")
     private LocalDate dateTo;
     private Long userId;
     private Long carId;
