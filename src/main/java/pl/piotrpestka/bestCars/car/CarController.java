@@ -55,7 +55,7 @@ public class CarController {
     }
 
     @GetMapping("/cars/deleteCar")
-    public String buyCar(@RequestParam long carId, Model model) {
+    public String deleteCar(@RequestParam long carId, Model model) {
         Car car = carService.deleteCar(carId);
         model.addAttribute("cars", carService.findAll());
         model.addAttribute("deleteCarResult", true);
